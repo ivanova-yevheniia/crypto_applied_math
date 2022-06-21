@@ -12,7 +12,6 @@ def keygenerate(plaintext, key):
   return ("".join(key))
 
 
-
 def encryption(plaintext, key):
   cipher = []
   for i in range(len(plaintext)):
