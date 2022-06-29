@@ -35,7 +35,7 @@ print("Your private key is a pair of numbers (d=",dd, ", n=",n ,").\n")
 print("Your public key is a pair of numbers (e=",select_e, ", n=",n, ").\n")
 
 
-c = [27, 1, 5, 15, 2, 4, 20, 30]
+c = [71, 98, 95, 51, 91, 106, 73, 28]
 print("Chipered message:", c)
 def get_index(c):
     for i in c:
@@ -51,5 +51,13 @@ def m():
     for elem in range(len(c)):
         mi = (ind()**dd) % n
         new_lst.append(mi)
+
     return new_lst
-print("Decrypted message: ", m())
+def message_to_text(list):
+    txt =""
+    for el in list:
+        txt += chr(el)
+    return txt
+message = m()
+print("Decrypted message: ", message)
+print("Message in text form: ", message_to_text(message))
