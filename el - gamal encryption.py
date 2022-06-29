@@ -25,11 +25,13 @@ def find_prime_numb():
         else:
             lst.append(i)
     return lst
-print_prime = print("Prime numbers for p-1:",find_prime_numb())
+print_prime = print("Prime numbers for p-2:",find_prime_numb())
 k = int(input("Choose 1 number k:"))
 
 a = (g**k) % p
 b = ((y**k) * input_message) % p
 print("Cipertext","{a},{b}".format(a = a, b = b))
 
-#decryptedM = ((a**(p-1-x)*b)%p)
+x=3333
+decryptedM = ((a**(p-1-x)*b)%p)
+print(decryptedM)
